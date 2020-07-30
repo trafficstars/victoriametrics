@@ -339,7 +339,7 @@ func (tags *FastTags) WriteAsString(writeStringer interface{ WriteString(string)
 		}
 		writeStringer.WriteString(tag.Key)
 		writeStringer.WriteString(`=`)
-		writeStringer.WriteString(tag.StringValue)
+		writeStringer.WriteString(`"` + tag.StringValue + `"`)
 		tagsCount++
 	}
 }
